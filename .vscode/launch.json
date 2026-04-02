@@ -20,14 +20,19 @@
     },
     {
       "name": "Launch React Frontend",
-      "type": "node",
+      "type": "node-terminal",
       "request": "launch",
-      "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
       "cwd": "${workspaceFolder}/octofit-tracker/frontend",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
-      "port": 3000,
+      "command": "npm run start:lab",
+      "serverReadyAction": {
+        "pattern": "You can now view .* in the browser\\.",
+        "uriFormat": "https://${env:CODESPACE_NAME}-3000.app.github.dev",
+        "action": "openExternally"
+      },
       "env": {
+        "HOST": "0.0.0.0",
+        "PORT": "3000",
+        "BROWSER": "none",
         "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
       }
     }
