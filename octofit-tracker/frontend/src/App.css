@@ -1,0 +1,33 @@
+body {
+  background: radial-gradient(circle at top right, #edf8ff 0%, #f7fbff 42%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.app-nav-wrap .navbar {
+  box-shadow: 0 3px 16px rgba(16, 24, 40, 0.05);
+}
+
+.nav-link.active {
+  background-color: #e7f1ff;
+  color: #0d6efd !important;
+}
+
+.app-hero-card {
+  background: linear-gradient(130deg, #ffffff 0%, #eef5ff 80%);
+}
+
+.octofit-table thead th {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.octofit-table td,
+.octofit-table th {
+  vertical-align: middle;
+}
+
+.modal pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
