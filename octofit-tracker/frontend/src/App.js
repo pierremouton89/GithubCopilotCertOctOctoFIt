@@ -6,6 +6,8 @@ import Users from './components/Users';
 import Workouts from './components/Workouts';
 import './App.css';
 
+const logoUrl = 'https://raw.githubusercontent.com/pierremouton89/GithubCopilotCertOctOctoFIt/main/docs/octofitapp-small.png';
+
 function Home() {
   return (
     <section className="container py-4">
@@ -48,7 +50,10 @@ function App() {
       <header className="app-nav-wrap">
         <nav className="navbar navbar-expand-lg bg-white border-bottom" aria-label="Main navigation">
           <div className="container py-2">
-            <NavLink to="/" className="navbar-brand fw-semibold h5 mb-0 text-primary">OctoFit</NavLink>
+            <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2 fw-semibold h5 mb-0 text-primary">
+              <img src={logoUrl} alt="OctoFit logo" className="octofit-logo" />
+              <span>OctoFit</span>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"

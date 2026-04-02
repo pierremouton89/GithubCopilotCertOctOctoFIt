@@ -1,30 +1,123 @@
+:root {
+  --octofit-blue: #0d6efd;
+  --octofit-blue-dark: #0a4fb8;
+  --octofit-cyan: #0ea5e9;
+  --octofit-text: #12324a;
+  --octofit-muted: #52718b;
+  --octofit-nav-bg: #f4f9ff;
+  --octofit-table-head: #dff0ff;
+  --octofit-table-alt: #f6fbff;
+}
+
 body {
-  background: radial-gradient(circle at top right, #edf8ff 0%, #f7fbff 42%, #ffffff 100%);
+  background:
+    radial-gradient(circle at 7% 6%, #d6eeff 0%, transparent 28%),
+    radial-gradient(circle at 92% 16%, #cce6ff 0%, transparent 25%),
+    linear-gradient(150deg, #eef7ff 0%, #f7fbff 45%, #f4fbff 100%);
   min-height: 100vh;
+  color: var(--octofit-text);
+}
+
+p,
+.text-secondary,
+.text-muted {
+  color: var(--octofit-muted) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-6,
+.h3 {
+  color: #0b3a63;
+}
+
+a,
+.link-primary {
+  color: #0b66c2 !important;
+}
+
+a:hover,
+.link-primary:hover {
+  color: #084e97 !important;
 }
 
 .app-nav-wrap .navbar {
-  box-shadow: 0 3px 16px rgba(16, 24, 40, 0.05);
+  background: linear-gradient(180deg, var(--octofit-nav-bg), #ffffff) !important;
+  box-shadow: 0 6px 22px rgba(11, 58, 99, 0.08);
+}
+
+.octofit-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
 }
 
 .nav-link.active {
-  background-color: #e7f1ff;
-  color: #0d6efd !important;
+  background-color: #d9edff;
+  color: var(--octofit-blue-dark) !important;
+}
+
+.nav-link:hover {
+  background-color: #eaf5ff;
 }
 
 .app-hero-card {
-  background: linear-gradient(130deg, #ffffff 0%, #eef5ff 80%);
+  background: linear-gradient(130deg, #ffffff 0%, #eaf4ff 80%);
+  border: 1px solid #d9e9f8;
+}
+
+.btn-primary {
+  background: linear-gradient(160deg, var(--octofit-cyan) 0%, var(--octofit-blue) 100%);
+  border-color: var(--octofit-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(160deg, #0b94cf 0%, var(--octofit-blue-dark) 100%);
+  border-color: var(--octofit-blue-dark);
+}
+
+.btn-outline-primary {
+  color: var(--octofit-blue-dark);
+  border-color: #9cc7f2;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #e4f2ff;
+  color: #083f78;
+  border-color: #86b8ea;
+}
+
+.octofit-table {
+  border: 1px solid #dcebf8;
 }
 
 .octofit-table thead th {
+  background-color: var(--octofit-table-head);
+  color: #0a4f83;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
+.octofit-table tbody tr:nth-of-type(even) {
+  background-color: var(--octofit-table-alt);
+}
+
 .octofit-table td,
 .octofit-table th {
   vertical-align: middle;
+}
+
+.modal-content {
+  border: 1px solid #c9e3ff;
 }
 
 .modal pre {
